@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script>
+        function check() {
+            var a = document.getElementById("passwordid").value;
+            var b = document.getElementById("nameid").value;
+            if (a == "" && b == "") {
+                alert("Enter password");
+
+            }
+            else {
+                alert("Success");
+            }
+        }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Segoe UI;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 90vh;
+            background-color: #242747;
+        }
+
+        #loginid {
+            border: 1px solid aliceblue;
+            border-radius: 15px;
+            width: 230px;
+            padding: 20px;
+            background-color: #242747;
+            color: rgb(255, 255, 255);
+            /* box-shadow:2px 0px 5px 2px; */
+
+        }
+
+        #loginid:hover {
+            border-color: aquamarine;
+
+        }
+
+        input {
+            padding: 6px;
+            border-radius: 10px;
+            border-style: none;
+            background: none;
+        }
+
+        #btn {
+            background-color: rgb(74, 74, 177);
+            border: 1px solid white;
+            box-shadow: 0px 8px 15px rgba(160, 156, 156, 0.1);
+            padding: 3px;
+            color: white;
+            cursor: pointer;
+            }
+
+            #btn:hover {
+                color:cornsilk;
+                /* animation: pulsate 1s  */
+                /* ease-in-out; */
+            }
+
+            .box {
+                border: 1px solid rgb(113, 152, 153);
+            }
+
+            a {
+                color: cadetblue;
+            }
+
+            text {
+                color: white;
+            }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="action_page.php">
+            <div id="loginid">
+                <h2>Login</h2>
+                <label for="nameid">Email address:</label><br>
+                <input type="text" name="name" id="nameid" class="box" placeholder="example@gmail.com"><br>
+                <label for="passwordid">Password:</label><br>
+                <input type="password" name="password" id="passwordid" class="box" placeholder="Password"><br><br>
+                <button type="button" name="button" id="btn" onclick="check()">Login</button><br>
+                <input type="checkbox" name="check" id="checkid">
+                <label for="checkid">Remember me</label>
+                <br><br>
+                <a href="#">Lost your password?</a>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
